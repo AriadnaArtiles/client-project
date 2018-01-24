@@ -19,9 +19,10 @@ export default class Lista extends Component {
     addTodo(todoText) {
         let todos = this.state.todos.slice();
         todos.push({ id: this.state.nextId, text: todoText });
+        let nextId = this.state.nextId + 1;
         this.setState({
             todos: todos,
-            nextId: ++this.state.nextId
+            nextId: nextId
         });
     }
 
